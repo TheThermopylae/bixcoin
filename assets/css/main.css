@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'YekanBakhFaNum-Regular';
+  src:
+    url('../../public/fonts/woff2/YekanBakhFaNum-Regular.woff2') format('woff2'),
+    url('../../public/fonts/woff/YekanBakhFaNum-Regular.woff') format('woff'),
+    url('../../public/fonts/ttf/YekanBakhFaNum-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-SemiBold';
+  src:
+    url('../../public/fonts/woff2/YekanBakhFaNum-SemiBold.woff2') format('woff2'),
+    url('../../public/fonts/woff/YekanBakhFaNum-SemiBold.woff') format('woff'),
+    url('../../public/fonts/ttf/YekanBakhFaNum-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-Bold';
+  src:
+    url('../../public/fonts/woff2/YekanBakhFaNum-Bold.woff2') format('woff2'),
+    url('../../public/fonts/woff/YekanBakhFaNum-Bold.woff') format('woff'),
+    url('../../public/fonts/ttf/YekanBakhFaNum-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PeydaFaNum-Regular';
+  src:
+    url('../../public/fonts/woff2/PeydaWebFaNum-Regular.woff2') format('woff2'),
+    url('../../public/fonts/woff/PeydaWebFaNum-Regular.woff') format('woff'),
+    url('../../public/fonts/ttf/PeydaFaNum-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+a {
+  font-family: 'PeydaFaNum-Regular' !important;
+}
+
+* {
+  font-family: 'YekanBakhFaNum-Regular';
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h2 {
+  @apply text-black text-2xl md:text-3xl;
+}
+
+.btn-link-c {
+  @apply px-6 py-3 bg-primary rounded-lg hover:opacity-90;
+}
+
+.icon-flex {
+  @apply flex justify-center items-center gap-2
+}
+
+.text-gradiant {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400;
+}
+
+.border-gradiant {
+  @apply p-[2px] rounded-xl bg-gradient-to-r from-red-400 to-orange-400;
+}
+
+.title-border {
+  @apply text-xl relative before:content-[''] before:absolute before:w-[4px] before:h-full before:bg-primary before:top-0 before:right-0 pr-4 text-white
+}
