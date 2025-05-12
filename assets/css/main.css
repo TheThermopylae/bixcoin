@@ -74,3 +74,12 @@ h2 {
 .title-border {
   @apply text-xl relative before:content-[''] before:absolute before:w-[4px] before:h-full before:bg-primary before:top-0 before:right-0 pr-4 text-white
 }
+
+.Notivue__notification {
+  width: 100% !important;
+  max-width: 550px !important;
+}
+
+.centered {
+  @apply flex items-center justify-center;
+}

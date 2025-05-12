@@ -20,7 +20,7 @@
     </div>
     <NuxtLink
       to="/"
-      class="mt-6 flex items-center gap-1 bg-yellow-500 w-fit px-6 py-2 rounded-lg hover:bg-yellow-400"
+      class="mt-6 flex items-center gap-1 btn-link-c w-fit"
       >ثبت نام کنید
       <svg
         xmlns="http://www.w3.org/2000/svg"

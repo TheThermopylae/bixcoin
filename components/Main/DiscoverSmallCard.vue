@@ -6,7 +6,7 @@
     </p>
     <NuxtLink
       to="/"
-      class="w-10 h-10 rounded-full flex justify-center items-center text-yellow-500 bg-main text-xl"
+      class="w-10 h-10 rounded-full flex justify-center items-center text-primary bg-main text-xl"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

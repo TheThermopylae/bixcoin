@@ -3,7 +3,7 @@
     <div class="w-3/4 m-auto py10 flex justify-between">
       <div class="my-10">
         <p class="text-3xl font-[800]">تجارت امن تر و کسب سود بزرگ!</p>
-        <p class="text-3xl mt-2 mb-6 text-yellow-500 font-[800]">
+        <p class="text-3xl mt-2 mb-6 text-primary font-[800]">
           از نقدینگی بالا و سهم 1,000,000 USDT لذت ببرید!
         </p>
         <p class="mb-4">
@@ -11,7 +11,7 @@
           نام کنید
         </p>
         <div
-          class="bg-bg-header w-fit rounded-lg border-2 px-2 py-1.5 border-gray-700 focus-within:border-yellow-500 flex"
+          class="bg-bg-header w-fit rounded-lg border-2 px-2 py-1.5 border-gray-700 focus-within:border-primary flex"
         >
           <input
             type="text"
@@ -20,7 +20,7 @@
           />
           <NuxtLink
             to="/user-panel"
-            class="flex items-center bg-yellow-500 text-black rounded-xl text-sm p-3 hover:bg-yellow-300"
+            class="flex items-center bg-primary text-black rounded-xl text-sm p-3 hover:bg-yellow-300"
             >ثبت نام برای پاداش
             <svg
               xmlns="http://www.w3.org/2000/svg"

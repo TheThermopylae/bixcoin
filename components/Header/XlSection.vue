@@ -108,7 +108,7 @@
     <div class="relative hidden xl:block">
       <input
         type="search"
-        class="bg-[#232325] rounded-full px-2 py-1 border border-[#232325] hover:border-yellow-500 focus:border-yellow-500 transition-all text-gray-200 w-32 placeholder:text-sm"
+        class="bg-[#232325] rounded-full px-2 py-1 border border-[#232325] hover:border-primary focus:border-primary transition-all text-gray-200 w-32 placeholder:text-sm"
         placeholder="SOL/USDT"
         id="search-inp"
       />
@@ -130,7 +130,7 @@
     <NuxtLink to="/login">ورود</NuxtLink>
     <NuxtLink
       to="/register"
-      class="bg-yellow-500 text-black p-2 rounded w-32 text-center"
+      class="bg-primary text-black p-2 rounded w-32 text-center"
       >ساخت حساب</NuxtLink
     >
     <img src="/public/logo.svg" alt="logo" class="w-[72px] xl:hidden" />

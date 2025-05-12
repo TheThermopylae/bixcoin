@@ -1,10 +1,12 @@
 <template>
   <section class="my-10 block">
     <div class="flex justify-between items-center mb-5">
-      <h2 class="font-extrabold md:font-2xl">فرصت معاملاتی بعدی خود را بگیرید</h2>
+      <h2 class="font-extrabold md:font-2xl">
+        فرصت معاملاتی بعدی خود را بگیرید
+      </h2>
       <NuxtLink
         to="/"
-        class="flex items-center text-yellow-500 bg-white rounded-lg py-2 px-4 gap-1"
+        class="flex items-center text-primary bg-white rounded-lg py-2 px-4 gap-1"
         >بیشتر
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,116 +49,26 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr v-for="item in showCrypto" :key="item.key">
                   <td class="flex gap-1 items-center ml-20">
                     <img
                       src="https://www.bybit.com/bycsi-root/assets/image/coins/light/btc.svg?quality=63&format=avif&resize=width/50.4"
                       alt="btc"
                       class="w-7"
                     />
-                    BTCUSDT
+                    {{ item.key }}
                   </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
+                  <td>{{ item.price }}</td>
+                  <td class="text-green-500" v-if="item.percent_change_24h > 0">
+                    {{ item.percent_change_24h.toFixed(2) }}+
+                  </td>
+                  <td class="text-red-500" style="direction: ltr" v-else>
+                    {{ item.percent_change_24h.toFixed(2) }}
+                  </td>
                   <td>
                     <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/eth.svg?quality=63&format=avif&resize=width/50.4"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    ETHUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/sol.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    SOLUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/xrp.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    XRPUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/fop/adc297ef-1730-4961-b1ef-ce3664f7343c.png?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    FARTCOINUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/fop/263f49bb-7c3e-443b-9064-1a9335e77c45.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    SUIUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
+                      :to="`/crypto/${item.key}`"
+                      class="border rounded-lg p-2 border-primary hover:bg-primary text-primary hover:text-white"
                       >معامله</NuxtLink
                     >
                   </td>
@@ -198,102 +110,7 @@
                   <td>
                     <NuxtLink
                       to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/eth.svg?quality=63&format=avif&resize=width/50.4"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    ETHUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/sol.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    SOLUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/assets/image/coins/light/xrp.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    XRPUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/fop/adc297ef-1730-4961-b1ef-ce3664f7343c.png?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    FARTCOINUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
-                      >معامله</NuxtLink
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="flex gap-1 items-center ml-20">
-                    <img
-                      src="https://www.bybit.com/bycsi-root/fop/263f49bb-7c3e-443b-9064-1a9335e77c45.svg?quality=56&format=avif&resize=width/44.800000000000004"
-                      alt="btc"
-                      class="w-7"
-                    />
-                    SUIUSDT
-                  </td>
-                  <td>83,000</td>
-                  <td class="text-green-500">+1.95%</td>
-                  <td>
-                    <NuxtLink
-                      to="/"
-                      class="border rounded-lg p-2 border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-white"
+                      class="border rounded-lg p-2 border-primary hover:bg-primary text-primary hover:text-white"
                       >معامله</NuxtLink
                     >
                   </td>
@@ -398,11 +215,13 @@
         </div>
       </div>
     </div>
-    <div class="mt-5 md:flex gap-4 items-center">
-      <p class="mb-2 md:m-0">اکنون ثبت نام کنید تا نمونه کارها را به صورت رایگان ایجاد کنید!</p>
+    <div class="mt-5 md:flex gap-4 items-center" v-if="!userData">
+      <p class="mb-2 md:m-0">
+        اکنون ثبت نام کنید تا نمونه کارها را به صورت رایگان ایجاد کنید!
+      </p>
       <NuxtLink
-        to="/"
-        class="flex items-center w-fit gap-2 bg-yellow-500 rounded-lg p-2 hover:bg-yellow-400 text-md"
+        to="/register"
+        class="flex items-center w-fit btn-link-c gap-2"
         >شروع کنید
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -423,3 +242,13 @@
     </div>
   </section>
 </template>
+
+<script setup>
+let config = useRuntimeConfig()
+
+let { userData } = userAuth()
+
+let { data } = await useFetch(`${config.public.API_BASE_URL}/api/coin`)
+
+let showCrypto = computed(() => data.value.data.coins.slice(0, 6))
+</script>

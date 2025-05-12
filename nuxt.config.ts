@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', 'notivue/animations.css', 'notivue/notification.css'],
   app: {
     head: {
       bodyAttrs: {
@@ -20,10 +20,20 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    '@nuxt/image'
+    '@nuxt/image',
+    'notivue/nuxt'
   ],
   image: {
     domains: ['https://images.contentstack.io'],
-    quality : 50
+    quality: 50
+  },
+  notivue: {
+    // position: 'top-right',
+  },
+  runtimeConfig: {
+    API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:5000/',
+    public: {
+      API_BASE_URL: process.env.API_BASE_URL
+    },
   },
 })

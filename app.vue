@@ -16,4 +16,9 @@
 .v-leave-to {
   opacity: 0;
 }
+
+.Notivue__content,
+.Notivue__content-message {
+  overflow: hidden;
+}
 </style>

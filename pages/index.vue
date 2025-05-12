@@ -20,6 +20,10 @@
 
 <script setup>
 useHead({
-  title : 'صرافی BX'
+  title: 'صرافی BX'
 })
+
+let config = useRuntimeConfig()
+
+
 </script>

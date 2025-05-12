@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group bg-white rounded-xl border-t border-yellow-500 flex justify-between items-center p-5 h-[250px] hover:shadow-md"
+    class="group bg-white rounded-xl border-t border-primary flex justify-between items-center p-5 h-[250px] hover:shadow-md"
   >
     <div class="flex flex-col h-full justify-between">
       <div class="mt-5">
@@ -11,7 +11,7 @@
           {{ props.item.text }}
         </p>
       </div>
-      <NuxtLink to="/" class="flex items-center text-yellow-500 text-lg"
+      <NuxtLink to="/" class="flex items-center text-primary text-lg"
         >جزییات
         <svg
           xmlns="http://www.w3.org/2000/svg"
