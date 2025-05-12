@@ -87,7 +87,7 @@
           <div>
             <NuxtLink
               to="/register"
-              class="bg-yellow-500 block p-3 rounded-lg text-center mb-3"
+              class="bg-primary block p-3 rounded-lg text-center mb-3"
               >ساخت حساب</NuxtLink
             >
             <NuxtLink to="/login" class="block text-center">ورود</NuxtLink>
