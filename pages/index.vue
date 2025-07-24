@@ -24,6 +24,4 @@ useHead({
 })
 
 let config = useRuntimeConfig()
-
-
 </script>

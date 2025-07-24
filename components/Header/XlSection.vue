@@ -127,12 +127,20 @@
     </div>
   </div>
   <div class="hidden md:flex items-center gap-5">
-    <NuxtLink to="/login">ورود</NuxtLink>
-    <NuxtLink
-      to="/register"
-      class="bg-primary text-black p-2 rounded w-32 text-center"
-      >ساخت حساب</NuxtLink
-    >
+    <div v-if="!userData" class="flex gap-5 items-center">
+      <NuxtLink to="/login">ورود</NuxtLink>
+      <NuxtLink
+        to="/register"
+        class="bg-primary text-black p-2 rounded w-32 text-center"
+        >ساخت حساب</NuxtLink
+      >
+    </div>
+    <NuxtLink to="/user-panel" v-else-if="userData && userData.role == 'USER'">ورود به پنل کاربری</NuxtLink>
+    <NuxtLink to="/user-panel" v-else>ورود به پنل مدیریت</NuxtLink>
     <img src="/public/logo.svg" alt="logo" class="w-[72px] xl:hidden" />
   </div>
 </template>
+
+<script setup>
+let { userData } = userAuth()
+</script>

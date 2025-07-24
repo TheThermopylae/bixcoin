@@ -6,28 +6,28 @@
         <div class="relative">
             <img src="/public/AuthCards/registeredUsers.png" alt="">
             <div class="absolute bottom-2 right-1/2 translate-x-1/2 w-full text-center">
-                <span class="text-xl text-yellow-500">+68M</span><br>
+                <span class="text-xl text-primary">+68M</span><br>
                 <p class="text-gray-300">کاربران ثبت نام شده</p>
             </div>
         </div>
         <div class="relative">
             <img src="/public/AuthCards/24HTradingVolume.png" alt="">
             <div class="absolute bottom-2 right-1/2 translate-x-1/2 w-full text-center">
-                <span class="text-xl text-yellow-500">+59B</span><br>
+                <span class="text-xl text-primary">+59B</span><br>
                 <p class="text-gray-300">حجم معاملات 24 ساعته</p>
             </div>
         </div>
         <div class="relative">
             <img src="/public/AuthCards/tokenListed.png" alt="">
             <div class="absolute bottom-2 right-1/2 translate-x-1/2 w-full text-center">
-                <span class="text-xl text-yellow-500">1840</span><br>
+                <span class="text-xl text-primary">1840</span><br>
                 <p class="text-gray-300">توکن های لیست شده</p>
             </div>
         </div>
         <div class="relative">
             <img src="/public/AuthCards/countries.png   " alt="">
             <div class="absolute bottom-2 right-1/2 translate-x-1/2 w-full text-center">
-                <span class="text-xl text-yellow-500">160</span><br>
+                <span class="text-xl text-primary">160</span><br>
                 <p class="text-gray-300">کشورها</p>
             </div>
         </div>

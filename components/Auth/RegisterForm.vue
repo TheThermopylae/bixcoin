@@ -4,7 +4,7 @@
     <div class="m-auto p-2">
       <NuxtLink
         to="/"
-        class="text-center block w-10 h-10 bg-yellow-500 rounded-full m-auto mb-5"
+        class="text-center block w-10 h-10 bg-primary rounded-full m-auto mb-5"
       ></NuxtLink>
       <form
         class="border rounded-lg w-[350px] md:w-[400px]"
@@ -12,7 +12,7 @@
       >
         <div class="flex justify-between border-b p-5">
           <h1 class="text-xl font-extrabold">ساخت حساب</h1>
-          <nuxtLink to="/login" class="flex items-center gap-2 text-yellow-500">
+          <nuxtLink to="/login" class="flex items-center gap-2 text-primary">
             ورود
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,13 +51,13 @@
             >
           </div>
           <button
-            class="bg-yellow-500 w-full rounded-lg p-2.5 hover:bg-yellow-400 h-12"
+            class="btn-link-c w-full rounded-lg p-2.5 h-12"
             v-if="!loading"
           >
             ارسال کد
           </button>
           <button
-            class="bg-yellow-500 w-full rounded-lg p-2.5 hover:bg-yellow-400 h-12 centered"
+            class="btn-link-c w-full rounded-lg p-2.5 h-12 centered"
             v-else
           >
             <LoadingSpinner></LoadingSpinner>
@@ -65,9 +65,6 @@
         </div>
       </form>
     </div>
-    <Notivue v-slot="item">
-      <Notification :item="item" />
-    </Notivue>
   </div>
 </template>
 
